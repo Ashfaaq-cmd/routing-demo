@@ -1,3 +1,4 @@
+import { ErrorWrapper } from './error-wrapper';
 export const metadata = {
   title: 'Routing Demo',
   description: 'A demo for Next.js routing',
@@ -14,7 +15,10 @@ export default function RootLayout({ children ,}: {
                 }}>
                     <p>Header</p>
                 </header>
-                {children}
+                
+                <ErrorWrapper>
+                    {children}
+                </ErrorWrapper>
                 
                 <footer style={{
                     backgroundColor: "lightgray",
